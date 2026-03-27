@@ -10,7 +10,7 @@ This project demonstrates:
 
 
 **Figure 1 – DC motor model**
-![DC_motor_model](results/DC_Rotor.png)
+![DC_motor_model](figures/DC_Rotor.png)
 
 ---
 ## Simulation Case
@@ -22,7 +22,7 @@ This project simulates the motion of a 1-DOF robotic arm from 0° to **90°** un
 The idea is reaching 90° within 3 seconds from start, with a smooth, non-aggressive velocity profile.
 
 **Figure 2 – 1-DoF Robotic Arm rotation**
-![1-DoF Robotic Arm](figure/robotic_arm.png)
+![1-DoF Robotic Arm](figures/robotic_arm.png)
 
 ---
 ### System Model
