@@ -8,9 +8,9 @@ This project demonstrates:
 - PD controller design and tuning
 - System dynamics simulation in Simulink
 
+![DC_motor_model](figures/DC_motor_model.png)
 
 **Figure 1 – DC motor model**
-![DC_motor_model](figures/DC_motor_model.png)
 
 ---
 ## Simulation Case
@@ -21,8 +21,9 @@ The system consists of:
 This project simulates the motion of a 1-DOF robotic arm from 0° to **90°** under PD control with a smooth S-curve trajectory, including the effect of a point mass at the tip.
 The idea is reaching 90° within 3 seconds from start, with a smooth, non-aggressive velocity profile.
 
-**Figure 2 – 1-DoF Robotic Arm rotation**
 ![1-DoF Robotic Arm](figures/1-DoF_Robotic_Arm.png)
+
+**Figure 2 – 1-DoF Robotic Arm rotation**
 
 ---
 ### System Model
