@@ -1,4 +1,4 @@
-# Closed-Loop PD Control of 1-DOF Robotic Arm with Gravity Compensation
+# Closed-Loop PD Position Control of 1-DOF Robotic Arm
 PD-based position control of a robotic arm driven by a DC motor, implemented in MATLAB/Simulink.
 
 ## Project Overview
