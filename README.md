@@ -1,4 +1,4 @@
-# 1-DoF-Robotic-Arm-Position-Control
+# Closed-Loop PD Control of 1-DOF Robotic Arm with Gravity Compensation
 PD-based position control of a robotic arm driven by a DC motor, implemented in MATLAB/Simulink.
 
 ## Project Overview
@@ -19,7 +19,7 @@ The system consists of:
 - 1 kg point mass at its tip.
 
 This project simulates the motion of a 1-DOF robotic arm from 0° to **90°** under PD control with a smooth S-curve trajectory, including the effect of a point mass at the tip.
-The idea is reaching 90° within 3 seconds from start, with a smooth, non-aggressive velocity profile.
+The objective is reaching 90° within 3 seconds from start, with a smooth, non-aggressive velocity profile.
 
 ![1-DoF Robotic Arm](figures/1-DoF_Robotic_Arm.png)
 
@@ -78,8 +78,10 @@ Where:
 - $$e(t) = θ_{desired}(t)$$ - $$θ_{actual}(t)$$ (position error)  
 - $$K_p$$ = proportional gain  
 - $$K_d$$ = derivative gain
- 
-No need $$K_i$$ integral gain in this case.
+
+The PD gains were tuned iteratively to achieve a compromise between fast response and stability.
+Increasing Kp reduced rise time but introduced oscillations, while Kd improved damping and reduced overshoot.
+No integral action $$(K_i)$$ is required.
 
 ---
 
@@ -97,7 +99,7 @@ The Simulink model includes:
 ## Results
 
 Simulation results show:
-- **Position, velocity and accleration response** over time  
+- **Position, velocity and acceleration response** over time  
 - **Control voltage signal** including PD action and gravity feedforward, and **current**
 - **Driving and resistive torques** 
 
@@ -115,7 +117,7 @@ Plots and Simulink-screenshots are stored in the `results/` folder.
 
 ## Observations from Simulations
 
-From the simulation, we can deduce:
+From the simulation, it can be observed that:
 
 - The PD controller, assisted by percentage-based gravity compensation, handles the transient smoothly
 - A small initial negative peak of ≈1.5° occurs due to inertia.
